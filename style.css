@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Lato:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 88px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    color: #333;
+    margin-left: 40px;
+}
+
+.content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textbox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textbox h2 {
+    color: #333;
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+.content .textbox h2 span {
+    color: green;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content p {
+    color: #333;
+}
+
+.content a {
+    display: inline-block;
+    background: green;
+    color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 8px 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.content .imgbox {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    padding-left: 100px;
+    margin-top: 50px;
+}
+
+.content .imgbox img {
+    max-width: 340px;
+}
+
+.thumb {
+    position: absolute;
+    display: flex;
+    top: 80%;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%);
+}
+
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.thumb li img {
+    max-width: 60px;
+}
+
+.sci {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.5);
+    filter: invert(1);
+}
+
+.circle {
+    position: absolute;
+    background-color: #017143;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(600px at right 800px);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    section {
+        padding: 80px;
+    }
+
+    header {
+        padding: 20px 80px;
+    }
+
+    .content .imgbox {
+        width: 500px;
+        padding-left: 50px;
+    }
+
+    .content .imgbox img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    section {
+        padding: 60px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header {
+        padding: 20px 60px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+    
+.textbox{
+    margin-top: 10%;
+}
+    .content .textbox {
+        max-width: 100%;
+    }
+
+    .content .imgbox {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .content .imgbox img {
+        max-width: 100%;
+    }
+
+    .thumb {
+        top: auto;
+        bottom: 10%;
+    }
+
+    .sci {
+        right: 10px;
+    }
+
+    .circle {
+        clip-path: circle(500px at right 600px);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 40px;
+    }
+    
+    .content .textbox h2 {
+        font-size: 2.5em;
+    }
+
+    .content a {
+        padding: 6px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 40px;
+    }
+
+    header {
+        padding: 20px 30px;
+        flex-direction: column;
+    }
+    .content {
+        flex-direction: column;
+        top: 10%;
+        position: absolute;
+    }
+    .textbox{
+        margin-top: 15%;
+        
+    }
+    .content .textbox h2 {
+        font-size: 2em;
+    }
+
+    .content a {
+        padding: 4px 12px;
+    }
+
+    .thumb {
+        flex-direction: column;
+        top: auto;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .thumb li {
+        margin: 10px 0;
+    }
+
+    .sci {
+        top: 90%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}
