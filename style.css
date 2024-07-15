@@ -250,6 +250,7 @@ header ul li a {
 @media (max-width: 576px) {
     section {
         padding: 40px;
+        
     }
 
     header {
